@@ -7,6 +7,7 @@ public class Notification {
     private LocalDateTime createdAt;
     private String subject;
     private String body;
+    protected String status = "All Good";
 
     public Notification(String subject, String body) {
         this.subject = subject;
@@ -32,5 +33,9 @@ public class Notification {
         } catch (NoTransportException e) {
             System.out.println("Throwing NoTransportException");
         }
+    }
+
+    public void getStatus() {
+        System.out.println(this.status);
     }
 }

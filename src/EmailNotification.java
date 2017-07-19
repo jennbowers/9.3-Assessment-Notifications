@@ -4,6 +4,7 @@
 public class EmailNotification extends Notification{
     private String recipient;
     private String smtpProvider;
+    protected String status;
 
     public EmailNotification(String subject, String body, String recipient, String smtpProvider) {
         super(subject, body);
