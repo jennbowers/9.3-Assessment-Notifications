@@ -24,4 +24,26 @@ public class EmailNotification extends Notification{
     public void transport() {
         System.out.println("Recipient: " + this.recipient + ", smtp Provider: " + this.smtpProvider + ", Subject: " + getSubject() + ", Body: " + getBody() + ", Created At: " + getCreatedAt());
     }
+
+    @Override
+    public void protectedMethodTest() {
+        super.protectedMethodTest();
+        System.out.println("And here I am again coming from the EmailNotification class!");
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        EmailNotification clonedEmailNotification = new EmailNotification(this.getSubject(), this.getBody(), this.getRecipient(), this.smtpProvider);
+        return clonedEmailNotification;
+    }
 }

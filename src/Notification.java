@@ -35,7 +35,13 @@ public class Notification {
         }
     }
 
-    public void getStatus() {
+    public void showStatus() {
         System.out.println(this.status);
     }
+
+    protected void protectedMethodTest () {
+        System.out.println("Hello world! I'm from a protected method!");
+    }
+
+
 }

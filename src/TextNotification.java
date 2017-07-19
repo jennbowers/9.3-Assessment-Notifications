@@ -9,6 +9,7 @@ public class TextNotification extends Notification {
         super(subject, body);
         this.recipient = recipient;
         this.smsProvider = smsProvider;
+        protectedMethodTest();
     }
 
     public String getRecipient() {
